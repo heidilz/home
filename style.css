@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    text-align: left;
+    color: black;
+    font-family: 'bodoni';
+    /*note margin */
+    margin: 0;
+}
+
+p { 
+    color:navy; 
+    font-family: 'Arial';
+}
+
+
+/* Main Wrappers */
+
+#container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    text-align: center;
+    /*grid-template-columns: repeat(12, 1fr);*/
+    grid-template-areas: 
+        "nav nav nav nav"
+        "footer footer footer footer"
+        "header header header header"
+        ". th1 th1 ."
+        ". th2 th2 ."
+        ". th3 th3 ."
+        ". th4 th4 ."
+    ;
+
+    grid-column-gap: 10px;
+    /*grid-row-gap: 10px;*/
+    /*grid-gap: 10px;*/
+}
+
+@media screen and (min-width: 760px) {
+    
+    #container {
+        max-width: 100%;
+        margin: 0 auto;
+        display: grid;
+        text-align: center;
+        /*grid-template-columns: repeat(12, 1fr);*/
+        grid-template-areas: 
+            "nav nav nav nav"
+        ;
+
+        grid-column-gap: 2px;
+        /*grid-row-gap: 10px;*/
+        /*grid-gap: 10px;*/
+    }
+    
+}
+
+
+/* Navigation */
+.home-nav {
+    /*grid-column: 1 / span 12;*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
+    padding: 20px;
+}
+
+.home-nav div {
+    
+    margin-left: 0px;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 5px;
+    grid-column: 1 / 4;
+}   
+
+
+/* Thumbnail Gallery */
+
+.item-01, .item-02, .item-03, .item-04 {
+    width: 50px ;
+    
+}
+
+.item-01 {
+grid-column: 3 /3;
+width: 50px ;
+   
+}
+.item-02 {
+grid-column: 2 / 2;
+width: 50px ;
+}
+.item-03 {
+grid-column: 3/ 3;
+width: 50px ;
+}
+.item-04 {
+width: 50px ;
+}
